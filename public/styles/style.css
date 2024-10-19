@@ -1,0 +1,337 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  }
+  body {
+    /* background-color: #faedcd; */
+    background-color: #ffc8dd;
+  }
+  nav {
+    height: 6vh;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+  }
+  nav img {
+    height: 40px;
+  }
+  nav {
+    /* background-color: #cdb4db; */
+    position: relative;
+    background-color: #ffafcc;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 0px 15px 15px 5px rgba(255, 48, 231, 0.1);
+    -moz-box-shadow: 0px 15px 15px 5px rgba(255, 48, 231, 0.1);
+    box-shadow: 0px 15px 15px 5px rgba(255, 48, 231, 0.1);
+  }
+  nav button{
+    background-color: #ffafcc;
+    border: none;
+  }
+  #menu{
+    padding: 10px;
+    display: flex;
+    opacity: 0.8;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1;
+    visibility:hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: solid black 1px;
+    border-radius: 3px;
+    background-color: #ffd7e5;
+  }
+  #menu :first-child{
+    display: flex;
+    flex-direction: column;
+  
+  }
+  #menuicon{
+    visibility: visible;
+  }
+  #menu img{
+    position: absolute;
+    right: 10px;
+    height: 24px;
+    width: 24px;
+  }
+  #menu a{
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+    margin: 6px;
+    color: black;
+    text-decoration:dotted;
+    text-transform: capitalize;
+    text-shadow: rgba(255,0,217,0.9) 0px 0px 39px;
+  }
+  #signup{
+    /* border: solid black 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #signup a{
+    height: 20px;
+    width: 80%;
+    color: white;
+    /* background-color: rgb(226, 226, 226); */
+    background-color: #0073e6;
+    opacity: 1;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: lighter;
+  }
+  #signup a:hover{
+    color: gray;
+  }
+  
+  #HeroSection {
+    position: relative;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 200px; */
+    background-image: url(/images/pexels-karolina-grabowska-4226765.jpg);
+    background-size: cover; /* This ensures the image covers the entire element */
+    background-position: center; /* Centers the image within the element */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+  #HeroSection :first-child {
+    font-size: 80px;
+    color: #d74f80;
+    text-shadow: rgba(255, 162, 0, 0.73) 0px 0px 39px;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    /* border: solid grey 1px; */
+    text-shadow: rgba(255,0,217,0.9) 0px 0px 39px;
+  }
+  #HeroSection button {
+    position: absolute;
+    bottom: 40px;
+    opacity: 0.8;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    /* background-color: thistle; */
+    background-color: #ffc8dd;
+    border: solid grey 1px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
+    -moz-box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
+    box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
+  }
+  #confessheader {
+    height: 30px;
+    width: 100%;
+    background-color: #f6f1d3;
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-shadow: 0px 16px 39px 10px rgba(191, 136, 42, 0.22);
+    -moz-box-shadow: 0px 16px 39px 10px rgba(191, 136, 42, 0.22);
+    box-shadow: 0px 16px 39px 10px rgba(191, 136, 42, 0.22);
+  }
+  #confessheader img {
+    height: 50px;
+  }
+  #ChatBox {
+    /* position: static; */
+    margin: 0 3vw;
+    height: 80vh;
+    overflow-y: auto;
+    background-color: #eeeeee;
+    padding: 18px;
+    border: dotted black 1px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
+    -moz-box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
+    box-shadow: 0px 10px 39px 10px rgba(62, 66, 66, 0.22);
+  }
+  #UserDetails {
+    display: flex;
+    align-items: center;
+  }
+  #UserDetails img {
+    margin-right: 5px;
+    height: 8vh;
+    width: 8vh;
+  }
+  #UserChat p {
+    background-color: #ffbffb6c;
+    border: solid black 1px;
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 4px 8px;
+    text-align: justify;
+  }
+  #SendPost {
+    margin: 0 3vw;
+    margin-top: 15px;
+  }
+  #SendPost textarea {
+    resize: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+  }
+  #SendPost button {
+    border-radius: 4px;
+    height: 30px;
+    width: 100%;
+    border: solid grey 1px;
+  }
+  
+  #Footer1 {
+    padding: 0 3vw;
+    margin-top: 10px;
+    height: 6vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9edc9;
+    /* background-color: #bde0fe; */
+  }
+  #SocialMedia img {
+    height: 5vh;
+    width: 5vh;
+    margin: 0px 3px;
+  }
+  #SocialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:blue; */
+  }
+  #Footer2 {
+    height: 15vw;
+    /* width: 100vw; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    background-color: #ccd5ae;
+    /* background-color: #a2d2ff; */
+    padding: 10px;
+  }
+  #Footer2 img {
+    height: 120px;
+    width: 120px;
+  }
+  #Footer2 div {
+    margin: 10px;
+  }
+  #Footer3 {
+    /* background-color: #79b0e4; */
+    background-color: #afbd80;
+  }
+  #Footer3 > p {
+    text-align: center;
+  }
+  #Links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  #Links a {
+    text-decoration: none;
+    color: black;
+  }
+  @media only screen and (max-width: 600px) {
+    #confessheader {
+      position: sticky;
+    }
+    #HeroSection{
+      background-position: 50% 75%; /* Centers the image within the element */
+  
+    }
+    nav {
+      /* background-color: #cdb4db; */
+      background-color: #ffafcc;
+      padding: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      -webkit-box-shadow: 0px 15px 15px 5px rgba(255, 48, 231, 0.1);
+      -moz-box-shadow: 0px 15px 15px 5px rgba(255, 48, 231, 0.1);
+      box-shadow: 0px 15px 15px 5px rgba(255, 48, 231, 0.1);
+    }
+    nav img {
+      height: 40px;
+    }
+    #confessheader img {
+      height: 30px;
+    }
+    #ChatBox {
+      height: 70vh;
+    }
+    #menu{
+      width: 40vw;
+      height: 40%;
+    }
+    #HeroSection {
+      height: 35vh;
+    }
+    #HeroSection :first-child {
+      font-size: 40px;
+    }
+    #UserDetails img {
+      height: 10vw;
+      width: 10vw;
+    }
+    #SendPost textarea {
+      height: 40px;
+    }
+    #SocialMedia img {
+      height: 5vw;
+      width: 5vw;
+    }
+    #Footer1 {
+      height: 6vw;
+    }
+    #Footer2 {
+      padding: 10px;
+      height: 15vh;
+    }
+    #Footer2 div {
+      padding: 7px;
+    }
+    #Footer2 img {
+      height: 100px;
+      width: 100px;
+    }
+    #Footer3 {
+      background-color: #afbd80;
+      font-size: small;
+    }
+    #Footer3 > p {
+      text-align: center;
+    }
+    #Links {
+    font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    #Links a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>confession page</title>
+    <link rel="stylesheet" href="/styles/style.css"/>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="/images/hnblogo.png" alt="">
+        <div>
+          <img src="/images/mainlogo-removebg-preview (2).png" alt="">
+          <img src="/images/love-letter.png" alt="">
+        </div>
+        <button id="menubtn">
+          <img id="menuicon" src="/images/menu.png" alt="">
+        </button>
+      </nav>
+      <div id="menu">
+        <div>
+          <img id="menuclose" src="/images/close.png" alt="">
+          <br>
+          <a href="">home</a>
+          <a href="">Confessions</a>
+          <a href="">About us</a>
+          <a href="">contact</a>
+        </div>
+      </div>
+      <div id="HeroSection">
+        <p>Plan Your Date...</p>
+        <button>Fix Date</button>
+      </div>
+    </header>
+    <main>
+      <div id="confessheader">
+        <img src="/images/HNB__2___1_-removebg-preview.png" alt="">
+      </div>
+      <div id="ChatBox">
+        <% if(users.length > 0){ %>
+          <% users.forEach(function(user){ %>
+            <br>
+            <br>
+            <div class="SingleChat">
+              <div id="UserDetails">
+                <img src="/images/user.png" alt="" />
+                <div id="UserInfo">
+                  <p>user id :<%= user._id %></p>
+                  <p><%= user.date %></p>
+                </div>
+              </div>
+              <div id="UserChat">
+                <p>
+                  <%= user.content %>
+                </p>
+              </div>
+            </div>  
+          <% }) %>
+        <% } else { %>
+          <div>
+            <h2>no confessions right now</h2>
+          </div>
+        <% } %> 
+      </div>
+      <div id="SendPost">
+        <form action="/create" method="post">
+          <textarea name="content" id="" placeholder="love Talks only...."></textarea>
+          <button type="submit">SEND</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div id="Footer1">
+        <p>Get connected with us</p>
+        <div id="SocialMedia">
+          <a href=""><img src="/images/facebook.png" alt="" /></a>
+          <a href=""><img src="/images/instagram.png" alt="" /></a>
+          <a href=""><img src="/images/linkedin.png" alt="" /></a>
+          <a href=""><img src="/images/telegram.png" alt="" /></a>
+          <a href=""><img src="/images/whatsapp.png" alt="" /></a>
+          <a href=""><img src="/images/youtube.png" alt="" /></a>
+        </div>
+      </div>
+      <div id="Footer2">
+        <div id="companylogo">
+          <img src="/images/HNB__1_-removebg-preview (1).png" alt="">
+        </div>
+        <div id="aboutcompany">
+          <h3>About</h3>
+          <p>Company:FaltuStudio</p>
+          <p>Owner:Jaan kenwat</p>
+        </div>
+      </div>
+      <div id="Footer3">
+        <div id="Links">
+          <a href=""><b>Contacts |</b></a>
+          <a href=""><b>Services |</b></a>
+          <a href=""><b>Join us |</b></a>
+          <a href=""><b>Terms & Condition</b></a>
+        </div>
+        <p>&copy; Copyright 2024 www.HNB.confess
+        </p>
+      </div>
+    </footer>
+    <script src="/scripts/home.js"></script>
+  </body>
+</html>
